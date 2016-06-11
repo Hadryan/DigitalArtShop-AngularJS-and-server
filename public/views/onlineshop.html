@@ -1,0 +1,95 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">Online Shop</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>Online Shop</h3>
+               <hr>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-xs-12" ng-if="!showOnlineshop">
+                <h3>{{message}}</h3>
+            </div>
+            <div class="col-xs-12" ng-if="showOnlineshop">
+                 <button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                    {{showDetails ? 'Hide Details':'Show Details'}}
+                </button>
+                 <button ng-click="toggleWishlists()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                    {{showWishlists ? 'Hide Wishlist Button':'Show Wishlist Button'}}
+                </button>
+				 <button ng-click="toggleCart()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                    {{showCart ? 'Hide Cart Button':'Show Cart Button'}}
+                </button>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"
+                    ng-class="{active:isSelected(1)}">
+                    <a ng-click="select(1)"
+                     aria-controls="all artworks"
+                    role="tab">All</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(2)}">
+                    <a ng-click="select(2)"
+                    aria-controls="life"
+                     role="tab">Life</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(3)}">
+                    <a ng-click="select(3)"
+                     aria-controls="object"
+                     role="tab">Object</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(4)}">
+                    <a  ng-click="select(4)"
+                     aria-controls="fiction"
+                     role="tab">Fiction</a></li>
+					<li role="presentation"
+                    ng-class="{active:isSelected(5)}">
+                    <a ng-click="select(5)"
+                     aria-controls="pattern"
+                     role="tab">Pattern</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(6)}">
+                    <a  ng-click="select(6)"
+                     aria-controls="philosophy"
+                     role="tab">Others</a></li> 
+                </ul>
+             
+                <div class="tab-content">
+               <ul class="media-list tab-pane fade in active">
+                <li class="media" ng-repeat="artwork in artworks | filter:filtText">
+                    <div class="media-left media-middle">
+                        <a ui-sref="app.artworkdetails({id: artwork._id})">
+                        <img class="media-object img-thumbnail"
+                        ng-src={{artwork.image}} alt="pattern">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{artwork.name}}
+                        <span class="label label-danger label-xs">{{artwork.label}}</span>
+                        <span class="badge">{{artwork.price/100 | currency}}</span></h2>
+                        <p ng-show="showDetails">{{artwork.description}}</p>
+                         <button  ng-show="showWishlists" ng-click="addToWishlists(artwork._id)" class="btn btn-xs btn-default pull-right"
+                    type="button">
+                          <i class="fa fa-heart"></i>
+                        </button>
+						 <button  ng-show="showCart" ng-click="addToCart(artwork._id)" class="btn btn-xs btn-default pull-right"
+                    type="button">
+                          <i class="fa fa-shopping-cart"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+
+            </div>
+            </div>
+        </div>
+
+    </div>

@@ -1,0 +1,87 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">Wishlist</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>My Wishlist</h3>
+               <hr>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-xs-12" ng-if="!showWishlist">
+                <h3>{{message}}</h3>
+            </div>
+            <div class="col-xs-12" ng-if="showWishlist">
+                 <button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                    {{showDetails ? 'Hide Details':'Show Details'}}
+                </button>
+                 <button ng-click="toggleDelete()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                    {{showDelete ? 'Hide Delete Button':'Show Delete Button'}}
+                </button>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"
+                    ng-class="{active:isSelected(1)}">
+                    <a ng-click="select(1)"
+                     aria-controls="all artworks"
+                    role="tab">All</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(2)}">
+                    <a ng-click="select(2)"
+                    aria-controls="life"
+                     role="tab">Life</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(3)}">
+                    <a ng-click="select(3)"
+                     aria-controls="object"
+                     role="tab">Object</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(4)}">
+                    <a  ng-click="select(4)"
+                     aria-controls="fiction"
+                     role="tab">Fiction</a></li>
+					<li role="presentation"
+                    ng-class="{active:isSelected(5)}">
+                    <a ng-click="select(5)"
+                     aria-controls="pattern"
+                     role="tab">Pattern</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(6)}">
+                    <a  ng-click="select(6)"
+                     aria-controls="philosophy"
+                     role="tab">Others</a></li> 
+                </ul>
+             
+                <div class="tab-content">
+               <ul class="media-list tab-pane fade in active">
+                <li class="media" ng-repeat="wishlist in wishlists | filter:filtText">
+                    <div class="media-left media-middle">
+                        <a ui-sref="app.artworkdetails({id: wishlist._id._id})">
+                        <img class="media-object img-thumbnail"
+                        ng-src={{wishlist._id.image}} alt="Red-eyed bird">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{wishlist._id.name}}
+                        <span class="label label-danger label-xs">{{wishlist._id.label}}</span>
+                        <span class="badge">{{wishlist._id.price/100 | currency}}</span></h2>
+                        <p ng-show="showDetails">{{wishlist._id.description}}</p>
+                         <button  ng-show="showDelete" ng-click="deleteWishlist(wishlist._id._id)" class="btn btn-xs btn-danger pull-right"
+                    type="button">
+                          <i class="fa fa-remove"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+
+            </div>
+            </div>
+        </div>
+
+    </div>

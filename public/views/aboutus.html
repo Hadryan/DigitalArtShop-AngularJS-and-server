@@ -1,0 +1,61 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">About Us</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>About Us</h3>
+               <hr>
+            </div>
+        </div>
+        
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-8">
+                <h2>Introduction</h2>
+                <p>Fan's Digital Art Shop is the dream of our CEO, Mr. Chi Ming Fan.  It opens just now.  It is a place for exhibition of the artworks that are made by our artists.  It is also a purchase platform for the customers who love our artworks and want to buy them.</p>
+                <p>All the artworks are made from photos and special effects.  Also, a descriptive title is given to each artwork.  Every artwork is unique and it will only be sold to one customer.</p>
+                <div class="well">
+                    <blockquote>
+                        <p>We can find abstract in reality.  
+                            We can also find reality in abstract.</p>
+                        <footer>Chi Ming Fan,  
+                        <cite title="Source Title">The Philosophy of Chi Ming Fan</cite></footer>
+                    </blockquote>                
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                
+            </div>
+        </div>
+
+
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-9">
+                <h2>Our Artists</h2>
+               <ul class="media-list">
+                <li class="media" ng-repeat="artist in artists">
+                    <div class="media-left media-middle">
+                        <a>
+                        <img class="media-object img-thumbnail"
+                        ng-src={{artist.image}} alt="Chi Ming Fan">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{artist.name}}
+                        <small>{{artist.designation}}</small></h3>
+                        <p>{{artist.description}}</p>
+                    </div>
+                </li>
+            </ul>
+
+            </div>
+             <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+            </div>
+       </div>
+    </div>

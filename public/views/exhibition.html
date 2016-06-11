@@ -1,0 +1,81 @@
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">Exhibition</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>Exhibition</h3>
+               <hr>
+            </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-xs-12" ng-if="!showExhibition">
+                <h3>{{message}}</h3>
+            </div>
+            <div class="col-xs-12" ng-if="showExhibition">
+                 <button ng-click="toggleDetails()" class="btn btn-xs btn-primary pull-right"
+                    type="button">
+                    {{showDetails ? 'Hide Details':'Show Details'}}
+                </button>
+                
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"
+                    ng-class="{active:isSelected(1)}">
+                    <a ng-click="select(1)"
+                     aria-controls="new artworks"
+                    role="tab">All</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(2)}">
+                    <a ng-click="select(2)"
+                    aria-controls="life"
+                     role="tab">Life</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(3)}">
+                    <a ng-click="select(3)"
+                     aria-controls="object"
+                     role="tab">Object</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(4)}">
+                    <a  ng-click="select(4)"
+                     aria-controls="fiction"
+                     role="tab">Fiction</a></li>
+					<li role="presentation"
+                    ng-class="{active:isSelected(5)}">
+                    <a ng-click="select(5)"
+                     aria-controls="pattern"
+                     role="tab">Pattern</a></li>
+                    <li role="presentation"
+                    ng-class="{active:isSelected(6)}">
+                    <a  ng-click="select(6)"
+                     aria-controls="philosophy"
+                     role="tab">Others</a></li> 
+                </ul>
+             
+                <div class="tab-content">
+               <ul class="media-list tab-pane fade in active">
+                <li class="media" ng-repeat="exhibition in exhibitions | filter:filtText">
+                    <div class="media-left media-middle">
+                        
+                        <img class="media-object img-thumbnail"
+                        ng-src={{exhibition.image}} alt="Semicircles">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{exhibition.name}}
+                        <span class="label label-danger label-xs">{{exhibition.label}}</span>
+                        <span class="badge">{{exhibition.price/100 | currency}}</span></h2>
+                        <p ng-show="showDetails">{{exhibition.description}}</p>
+                        
+                    </div>
+                </li>
+            </ul>
+
+            </div>
+            </div>
+        </div>
+
+    </div>

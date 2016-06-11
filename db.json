@@ -1,0 +1,264 @@
+{
+  "artworks": [
+    {
+      "name": "Red-eyed bird",
+      "image": "images/artwork001.jpg",
+      "category": "life",
+      "label": "Last month",
+	  "featured": false,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "I love it very much!!!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 4,
+          "comment": "Is it real?",
+          "author": "Ann Chan"
+        }
+      ]
+    },
+	{
+      "name": "A girl, wearing a scarf and a cap, sleeping inside the train",
+      "image": "images/artwork002.jpg",
+      "category": "life",
+      "label": "New",
+	  "featured": true,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Quite abstract!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 3,
+          "comment": "Interesting!",
+          "author": "Steven Chan"
+        }
+      ]
+    },
+	{
+      "name": "A long road ahead",
+      "image": "images/artwork003.jpg",
+      "category": "philosophy",
+      "label": "New",
+	  "featured": true,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Abstract but beautiful!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 2,
+          "comment": "Do not understand!",
+          "author": "Alex Lam"
+        }
+      ]
+    },
+    {
+      "name": "Color pencils",
+      "image": "images/artwork004.jpg",
+      "category": "object",
+      "label": "Last month",
+	  "featured": false,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Good blur!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 3,
+          "comment": "So many color pencils!",
+          "author": "Simon Lam"
+        }
+      ]
+    },
+	{
+      "name": "Night scenery",
+      "image": "images/artwork005.jpg",
+      "category": "fiction",
+      "label": "Last month",
+	  "featured": false,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Wonderful!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 4,
+          "comment": "mysterious!",
+          "author": "Yuri Kwok"
+        }
+      ]
+    },
+	{
+      "name": "Pattern",
+      "image": "images/artwork006.jpg",
+      "category": "pattern",
+      "label": "Last month",
+	  "featured": false,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "I like it!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 5,
+          "comment": "Very cool!",
+          "author": "Seekay"
+        }
+      ]
+    },
+	{
+      "name": "Semicircles",
+      "image": "images/artwork007.jpg",
+      "category": "pattern",
+      "label": "New",
+	  "featured": true,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "100 marks!!!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 4,
+          "comment": "Colorful!",
+          "author": "Jason Yau"
+        }
+      ]
+    },
+	{
+      "name": "Smoke and flame",
+      "image": "images/artwork008.jpg",
+      "category": "fiction",
+      "label": "Last month",
+	  "featured": false,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Good!!!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 2,
+          "comment": "Boring!",
+          "author": "Adrian Tam"
+        }
+      ]
+    },
+	{
+      "name": "Stingray swims between reefs",
+      "image": "images/artwork009.jpg",
+      "category": "life",
+      "label": "Last month",
+	  "featured": false,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Artistic!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 4,
+          "comment": "My favorite!",
+          "author": "Vincent Leung"
+        }
+      ]
+    },
+    {
+      "name": "Unlimited number of particles pass through space",
+      "image": "images/artwork010.jpg",
+      "category": "fiction",
+      "label": "New",
+	  "featured": true,
+      "price": "99",
+      "description": "Free Delivery",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Elegant!",
+          "author": "James Fan"
+        },
+        {
+          "rating": 5,
+          "comment": "Beautiful!!",
+          "author": "Josephine Yung"
+        }
+      ]
+    }
+  ],
+  "exhibitions": [
+    {
+      "name": "A girl, wearing a scarf and a cap, sleeping inside the train",
+      "image": "images/artwork002.jpg",
+      "category": "life",
+      "label": "New",
+	  "featured": true,
+      "price": "99",
+      "description": "Free Delivery"
+    },
+	{
+      "name": "A long road ahead",
+      "image": "images/artwork003.jpg",
+      "category": "philosophy",
+      "label": "New",
+	  "featured": true,
+      "price": "99",
+      "description": "Free Delivery"
+    },
+	{
+      "name": "Semicircles",
+      "image": "images/artwork007.jpg",
+      "category": "pattern",
+      "label": "New",
+	  "featured": true,
+      "price": "99",
+      "description": "Free Delivery"
+    },
+	{
+      "name": "Unlimited number of particles pass through space",
+      "image": "images/artwork010.jpg",
+      "category": "fiction",
+      "label": "New",
+	  "featured": true,
+      "price": "99",
+      "description": "Free Delivery"
+    }
+  ],
+  "artists": [
+    {
+      "name": "Chi Ming Fan",
+      "image": "images/chimingfan.jpg",
+      "designation": "Chief Executive Officer",
+      "abbr": "CEO",
+      "description": "Our CEO was graduated from HKUST.  He studied Physics but liked art very much.  His artworks are creative and unique.  He learns art through reading, online learning and experiment."
+    }
+  ],
+  "feedbacks": [
+
+  ]
+}

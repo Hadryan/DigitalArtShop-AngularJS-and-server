@@ -1,0 +1,80 @@
+
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+                <p style="padding:20px;"></p>
+                <h3 align=center>Online Shop</h3>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+                <div ng-if="!showArtwork">
+                    <h3>{{message}}</h3>
+                </div>
+                <div class="media" ng-if="showArtwork">
+                    <div class="media-left media-middle">
+						<a ui-sref="app.onlineshop">                        
+                        <img class="media-object img-thumbnail" 
+                        ng-src={{artwork.image}} alt="Red-eyed bird">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{artwork.name}} 
+                        <span class="label label-danger">{{artwork.label}}</span> 
+                        <span class="badge">{{artwork.price/100 | currency}}</span></h2>
+                        <p>{{artwork.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3">
+                <p style="padding:20px;"></p>
+                <h3 align=center>Exhibition</h3>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <div ng-if="!showExhibition">
+                    <h3>{{message}}</h3>
+                </div>
+                <div class="media" ng-if="showExhibition">
+                    <div class="media-body">
+                        <h2 class="media-heading">{{exhibition.name}} 
+                        <span class="label label-danger label-xs">{{exhibition.label}}</span>
+                        <span class="badge">{{exhibition.price/100 | currency}}</span></h2>
+                        <p>{{exhibition.description}}</p>
+                    </div>
+                    <div class="media-right media-middle">
+                        <a ui-sref="app.exhibition">
+                        <img class="media-object img-thumbnail" 
+                        ng-src={{exhibition.image}} alt="Semicircles">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-3 col-sm-push-9">
+                <p style="padding:20px;"></p>
+                <h3 align=center>Our Artists</h3>
+            </div>
+            <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+                <div ng-if="!showArtist">
+                    <h3>{{message}}</h3>
+                </div>
+                <div class="media" ng-if="showArtist">
+                    <div class="media-left media-middle">
+                        <a ui-sref="app.aboutus">
+                        <img class="media-object img-thumbnail"
+                        ng-src={{artist.image}} alt="Chi Ming Fan">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">{{artist.name}}
+                        <small>{{artist.designation}}</small></h3>
+                        <p>{{artist.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
